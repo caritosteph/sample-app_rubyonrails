@@ -9,6 +9,7 @@ class SessionController < ApplicationController
       render 'users/show'
     else
       # Create an error message.
+      flash[:danger] = "Invalid email/password combination"
       render 'new'
     end
   end
